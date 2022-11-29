@@ -34,18 +34,18 @@ $nombre = "";
   $fpdf->SetFont('impact','',40); 
   //$fpdf->SetFont('times','BI',30);
   $fpdf->Image('cert.jpg', 0, 0,293,206);
-  $fpdf->SetXY(47, 110);
-  $fpdf->Write(0, $nombre." ".$apellido);
+  $fpdf->SetXY(47, 103);
+  $fpdf->cell(100,10, utf8_decode($nombre)." ".utf8_decode($apellido), 0, 0,'C');
 
   $fpdf->SetTextColor(0, 0, 0);
   $fpdf->SetFont('impact','',20); 
 
-  $fpdf->SetXY(75, 122);
+  $fpdf->SetXY(75, 120);
   $fpdf->Write(0,'C.I: ' .$cedulamuestra);
 
 
 
-$fpdf->Output('D','Certificado_pequiven_'.$cedula.'.pdf');
+$fpdf->Output('I','Certificado_pequiven_'.$cedula.'.pdf');
 
 
 /*

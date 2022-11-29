@@ -32,8 +32,7 @@
 		}
 	} else {
 		$llok = false;
-		$lcmsg .= "La cedula es invalida \n";
-		echo "<script>alert('".$lcmsg."')</script>";
+		header('Location: ../error.html'); 
 	}
 
 	// limpiando la conexion
